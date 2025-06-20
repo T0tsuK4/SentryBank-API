@@ -38,7 +38,8 @@ public class ClienteFisicoService {
         clienteFisicoExistente.setNome(clienteFisicoAtualizado.getNome());
         clienteFisicoExistente.setEmail(clienteFisicoAtualizado.getEmail());
         clienteFisicoExistente.setSenha(clienteFisicoAtualizado.getSenha());
-
+        clienteFisicoExistente.setCpf(clienteFisicoAtualizado.getCpf());
+        clienteFisicoExistente.setDataNascimento(clienteFisicoAtualizado.getDataNascimento());
         return clienteFisicoRepository.save(clienteFisicoExistente);
     }
 

@@ -3,6 +3,7 @@ package com.banco.sentrybank.api.controller;
 
 import com.banco.sentrybank.api.domain.model.Cliente;
 import com.banco.sentrybank.api.domain.model.ClienteFisico;
+import com.banco.sentrybank.api.domain.repository.ClienteFisicoRepository;
 import com.banco.sentrybank.api.domain.service.ClienteFisicoService;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
@@ -11,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 import java.util.Optional;
@@ -21,10 +23,12 @@ import java.util.Optional;
 public class ClienteFisicoController {
 
     private final ClienteFisicoService clienteFisicoService;
+    private final ClienteFisicoRepository clienteFisicoRepository;
 
     @Autowired
-    public ClienteFisicoController(ClienteFisicoService clienteFisicoService) {
+    public ClienteFisicoController(ClienteFisicoService clienteFisicoService, ClienteFisicoRepository clienteFisicoRepository) {
         this.clienteFisicoService = clienteFisicoService;
+        this.clienteFisicoRepository = clienteFisicoRepository;
     }
     //REQUISIÇÃO HTTP GET: Lista todos os clientes fisicos
     @GetMapping
@@ -55,8 +59,10 @@ public class ClienteFisicoController {
     }
 
     @DeleteMapping("/fisico/{id}") //Metodo que busca e deleta o cliente fisico pelo id
-    public ResponseEntity<Void> deletarClientFisico(@PathVariable Long id){
-        clienteFisicoService.deletarClienteFisico(id);
+    public ResponseEntity<Void> deletarClientFisico(@PathVariable Long id) {
+        ClienteFisico cliente = clienteFisicoRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Cliente físico não encontrado."));
+        clienteFisicoRepository.deleteById(id);
         return ResponseEntity.noContent().build();
     }
 

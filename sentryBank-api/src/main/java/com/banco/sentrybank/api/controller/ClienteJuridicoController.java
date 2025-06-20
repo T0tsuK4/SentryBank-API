@@ -2,6 +2,7 @@ package com.banco.sentrybank.api.controller;
 
 import com.banco.sentrybank.api.domain.model.ClienteFisico;
 import com.banco.sentrybank.api.domain.model.ClienteJuridico;
+import com.banco.sentrybank.api.domain.repository.ClienteJuridicoRepository;
 import com.banco.sentrybank.api.domain.service.ClienteJuridicoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
