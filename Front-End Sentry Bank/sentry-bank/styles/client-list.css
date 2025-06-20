@@ -1,0 +1,45 @@
+@import url("./preset.css");
+
+.client__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #000, #081c4e);
+}
+
+.client__list__main {
+  background-color: #0000005d;
+  padding: 2rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px #040331;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.client__list__title h1 {
+  font-weight: 450;
+  font-size: 2rem;
+}
+
+.return__btn {
+  font-weight: 300;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.7rem;
+}
+
+.return__btn:hover {
+  text-decoration: underline;
+}
+
+footer {
+  color: #0482c5d8;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.7rem;
+  font-size: 0.9rem;
+}
+

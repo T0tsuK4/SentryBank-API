@@ -1,0 +1,102 @@
+@import url("./preset.css");
+
+body {
+  background-color: #000;
+}
+
+.adm__panel {
+  background-image: url("../assets/images/bg-dev.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.adm__panel::after {
+  content: "";
+  inset: 0;
+  position: absolute;
+  background-color: #000000d0;
+  z-index: 0;
+}
+
+.logo {
+  width: 12rem;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.adm__panel__main {
+  background-color: #000002;
+  padding: 2rem 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #040331;
+  z-index: 1;
+}
+
+.adm__panel__main h1 {
+  font-weight: 500;
+  background: linear-gradient(to right, #00a6ff, #00a6ff7a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.adm__panel__options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.adm__panel__option {
+  border: 2px solid #039cee94;
+  color: #3abaffef;
+  background-color: #000002;
+  border-radius: 99999px;
+  padding: 0.7rem 0.5rem;
+  font-size: 1.1rem;
+  width: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.8rem;
+  transition: 0.3s ease;
+
+  & i {
+    margin-top: 0.15rem;
+    color: var(--main-color);
+  }
+}
+
+.adm__panel__option:hover {
+  color: #fff;
+  background-color: var(--main-color);
+  & i {
+    color: #fff;
+  }
+}
+
+.return__btn {
+  text-align: center;
+  font-weight: 300;
+}
+
+.return__btn:hover {
+  text-decoration: underline;
+}
+
+footer {
+  color: #0294e2b7;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.7rem;
+  font-size: 0.9rem;
+  z-index: 1;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/deletes.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/icon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <title>Deletar Cliente - Sentry Bank</title>
+  </head>
+  <body>
+    <section class="changes__main">
+      <div class="main__container" data-aos="fade-up" data-aos-duration="1000">
+        <div class="main__container-table">
+          <p>Excluir Cliente do Banco</p>
+        </div>
+        <div class="main__container-change">
+          <i class="fa-solid fa-eraser"></i>
+          <form id="deleteForm">
+            <div class="input__container">
+              <label for="id">ID: </label>
+              <input name="id" id="id" type="number" placeholder="ID" required />
+            </div>
+
+            <div class="input__container">
+              <label for="tipo">Tipo de Cliente:</label>
+              <select name="tipo" id="tipo" required>
+                <option value="">Selecione</option>
+                <option value="fisico">Físico</option>
+                <option value="juridico">Jurídico</option>
+              </select>
+            </div>
+
+            <div class="btn__main">
+              <div class="btn__container">
+                <button class="form__btn clear__btn" type="reset">
+                  Limpar
+                </button>
+                <button class="form__btn submit__btn" type="submit">
+                  Deletar
+                </button>
+              </div>
+              <a class="return__btn" href="/pages/adm-panel.html">Voltar</a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <footer>&copy; Sentry Bank</footer>
+    </section>
+    <script defer src="../scripts/deletes.js"></script>
+  </body>
+</html>

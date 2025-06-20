@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/icon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+
+
+    <title>Página Inicial - Sentry Bank</title>
+  </head>
+  <body>
+    <section class="main">
+      <div class="logo__main" data-aos="fade-up" data-aos-duration="1000">
+        <div class="logo">
+          <img src="./assets/images/icon.png" alt="" />
+        </div>
+        <div class="typed__container">
+          <div id="typed-strings">
+            <h1 class="logo__name">SENTRY BANK</h1>
+          </div>
+
+          <span id="typed"></span>
+        </div>
+      </div>
+
+      <div class="home__text" data-aos="fade-up" data-aos-duration="1300">
+        <p>
+          Na Sentry Bank, sua conta vai além do básico:<br /><br />
+          <i class="fa-solid fa-check"></i> &nbsp; Zero tarifas<br />
+          <i class="fa-solid fa-check"></i> &nbsp; Alto Rendimento<br />
+          <i class="fa-solid fa-check"></i> &nbsp; Cartão com cashback<br />
+          <i class="fa-solid fa-check"></i> &nbsp; Atendimento especializado<br /><br />
+        </p>
+
+        <div class="home__btns">
+          <a href="./pages/register.html" class="home__btn">Cadastre-se</a>
+          <a href="./pages/adm-panel.html" class="home__btn">Sentry ADM</a>
+        </div>
+      </div>
+      <footer>&copy; Sentry Bank</footer>
+      <div class="pictures__container">
+        <a href="https://github.com/levyvp" target="_blank" class="picture">
+          <img src="./assets/images/levy.jpeg" alt="levy" />
+        </a>
+        <a href="https://github.com/T0tsuK4" target="_blank" class="picture">
+          <img src="./assets/images/raul.jpeg" alt="raul" />
+        </a>
+        <a href="https://github.com/hennriquee" target="_blank" class="picture">
+          <img src="./assets/images/bruno.jpeg" alt="bruno" />
+        </a>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+      var typed = new Typed("#typed", {
+        stringsElement: "#typed-strings",
+        backSpeed: 100,
+        typeSpeed: 150,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>
