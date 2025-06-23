@@ -72,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Chama as funções para listar os clientes ao carregar a página
   listarClientesFisicos();
   listarClientesJuridicos();
 });

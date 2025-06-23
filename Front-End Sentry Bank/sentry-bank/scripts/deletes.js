@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     try {
-      // 🔎 Verifica se o cliente existe
       const buscaResponse = await fetch(urlBusca);
       if (buscaResponse.status === 404) {
         alert(`Cliente ${tipo} com ID ${id} não encontrado.`);
@@ -50,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // 🚮 Realiza a exclusão
       const deleteResponse = await fetch(urlDelete, {
         method: 'DELETE',
       });

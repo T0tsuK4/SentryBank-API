@@ -1,7 +1,6 @@
 const personType = document.getElementById("person-type");
 const form = document.querySelector("form");
 
-// Alternância de Pessoa Física e Jurídica
 const toggleForm = () => {
   form.classList.toggle("juridica");
 
@@ -27,7 +26,6 @@ const toggleForm = () => {
 
 personType.addEventListener("change", toggleForm);
 
-// Máscara CPF
 const aplicarMascaraCPF = (e) => {
   let cpf = e.target.value.replace(/\D/g, "").slice(0, 11);
   cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
@@ -38,7 +36,6 @@ const aplicarMascaraCPF = (e) => {
 
 document.getElementsByName("cpf")[0]?.addEventListener("input", aplicarMascaraCPF);
 
-// Máscara CNPJ
 const aplicarMascaraCNPJ = (e) => {
   let cnpj = e.target.value.replace(/\D/g, "").slice(0, 14);
   cnpj = cnpj.replace(/^(\d{2})(\d)/, "$1.$2");
@@ -94,7 +91,6 @@ function validarCNPJ(cnpj) {
   return resultado === parseInt(digitos.charAt(1));
 }
 
-// Envio para API
 form.addEventListener("submit", async function (event) {
   event.preventDefault();
 
@@ -111,7 +107,6 @@ form.addEventListener("submit", async function (event) {
   const dataNascimento = document.getElementsByName("data-nascimento")[0].value;
   const dataCriacao = document.getElementsByName("data-criacao")[0].value;
 
-  // Validação
   if (tipoPessoa === "fisica" && !validarCPF(cpf)) {
     alert("CPF inválido.");
     return;

@@ -32,7 +32,6 @@
           <i class="fa-solid fa-fingerprint"></i>
 
           <form id="clienteForm">
-            <!-- Tipo de Cliente -->
             <div class="input__container">
               <label for="tipoCliente">Tipo de Cliente:</label>
               <select name="tipoCliente" id="tipoCliente" required>
@@ -42,9 +41,7 @@
               </select>
             </div>
 
-            <!-- Todos os campos abaixo ficam ocultos até escolher o tipo -->
             <div id="formCampos" class="hidden">
-              <!-- ID -->
               <div class="input__container">
                 <label for="id">ID:</label>
                 <input
@@ -59,7 +56,6 @@
                 </a>
               </div>
 
-              <!-- Campos comuns -->
               <div class="input__container">
                 <label for="nome">Nome:</label>
                 <input
@@ -92,7 +88,6 @@
               />
             </div>
 
-              <!-- Campos específicos para Físico -->
               <div class="fisicoFields hidden">
                 <div class="input__container">
                   <label for="cpf">CPF:</label>
@@ -105,7 +100,6 @@
                 </div>
               </div>
 
-              <!-- Campos específicos para Jurídico -->
               <div class="juridicoFields hidden">
                 <div class="input__container">
                   <label for="cnpj">CNPJ:</label>
@@ -128,7 +122,6 @@
                 </div>
               </div>
 
-              <!-- Botões -->
               <div class="btn__main">
                 <div class="btn__container">
                   <button class="form__btn clear__btn" type="reset">

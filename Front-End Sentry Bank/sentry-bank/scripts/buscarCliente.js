@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const juridicoFields = document.querySelector('.juridicoFields');
   const formCampos = document.getElementById('formCampos');
 
-  // 🔸 Evento de troca do tipo de cliente
   tipoCliente.addEventListener('change', () => {
     const tipo = tipoCliente.value;
 
@@ -42,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
     limparCamposComuns();
   });
 
-  // 🔍 Buscar cliente
   btnBuscar.addEventListener('click', async (e) => {
     e.preventDefault();
 
@@ -74,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       nomeInput.value = data.nome || '';
       emailInput.value = data.email || '';
-      senhaInput.value = data.senha || ''; // Agora preenche senha
+      senhaInput.value = data.senha || ''; 
 
       if (tipo === 'fisico') {
         cpfInput.value = data.cpf || '';
@@ -90,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ✅ Evento de envio do formulário (atualizar)
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
@@ -147,7 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 🔸 Limpar campos
   function limparCamposComuns() {
     nomeInput.value = '';
     emailInput.value = '';
