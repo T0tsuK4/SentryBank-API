@@ -10,7 +10,7 @@ Este projeto simula operações bancárias como cadastro de clientes (físicos e
 ## 🛠️ Tecnologias Utilizadas
 
 ### 🔗 Backend (API)
-- **Linguagem:** Java 17+
+- **Linguagem:** Java 21
 - **Framework:** Spring Boot
 - **Padrão Arquitetural:** MVC (Model-View-Controller)
 - **ORM:** Hibernate (JPA)
@@ -19,7 +19,6 @@ Este projeto simula operações bancárias como cadastro de clientes (físicos e
 - **Validações:** Bean Validation (Jakarta Validation)
 - **Documentação:** OpenAPI (Swagger) *(pode ser implementado)*
 - **Controle de erros:** Exception Handler Customizado
-- **Logs:** SLF4J + Logback
 - **Transações:** Gerenciamento com `@Transactional` do Spring
 
 ### 🗄️ Banco de Dados
@@ -32,7 +31,7 @@ Este projeto simula operações bancárias como cadastro de clientes (físicos e
 ### 🎨 Frontend (Interface Web)
 - **Tecnologias:** HTML5, CSS3, JavaScript
 - **Estilo:** 
-  - Design Responsivo
+  - Design Web Desktop
   - Layout escuro com gradientes e foco em usabilidade
 - **Framework CSS:** Próprio (customizado)
 
@@ -175,6 +174,7 @@ http://localhost:8080
 - Integração de PIX e boletos
 - Deploy em nuvem (AWS, Azure, Railway, etc.)
 - Interface web aprimorada com React ou Angular
+- **Logs:** SLF4J + Logback
 
 ---
 
